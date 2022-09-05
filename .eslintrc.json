@@ -1,0 +1,19 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "node": true,
+        "qunit": true
+    },
+    "extends": ["airbnb-base", "plugin:qunit/recommended"],
+    "overrides": [
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "rules": {
+        "no-param-reassign": [2, { "props": false }],
+        "prefer-arrow-callback": "off"
+    }
+}
