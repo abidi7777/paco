@@ -135,7 +135,8 @@ class Paco {
   }
 
   static between(leftParser, rightParser) {
-    return (contentParser) => Paco.sequence([leftParser, contentParser, rightParser]);
+    return (contentParser) => Paco.sequence([leftParser, contentParser, rightParser])
+      .map((res) => res[1]);
   }
 }
 

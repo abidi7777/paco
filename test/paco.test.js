@@ -124,7 +124,7 @@ QUnit.test('should match string between curly brackets', function matchBetweenCu
   const openCurlyBrackets = Paco.sequence([new Paco(char('{')), new Paco(char('{'))]);
   const closeCurlyBrackets = Paco.sequence([new Paco(char('}')), new Paco(char('}'))]);
   const betweenCurlyBrackets = Paco.between(openCurlyBrackets, closeCurlyBrackets);
-  const extractKey = betweenCurlyBrackets(new Paco(letters())).map((res) => res[1]);
+  const extractKey = betweenCurlyBrackets(new Paco(letters()));
 
   assert.expect(1);
   assert.deepEqual(extractKey.run('{{name}}'), {
